@@ -9,8 +9,11 @@ namespace FProy.BD
 {
    public class MiBd: DbContext{
 
-       public DbSet<Game> Game {get; set;}
-
+       public DbSet<Game> Juegos {get; set;}
+       public DbSet<Company> Companias { get; set; }
+       public DbSet<Console> Consolas { get; set; }
+       public DbSet<Genre> Generos { get; set; }
+       public DbSet<Store> Tiendas { get; set; }
 
 
 
