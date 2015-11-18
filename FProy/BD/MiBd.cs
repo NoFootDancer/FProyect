@@ -14,6 +14,12 @@ namespace FProy.BD
        public DbSet<Console> Consolas { get; set; }
        public DbSet<Genre> Generos { get; set; }
        public DbSet<Store> Tiendas { get; set; }
+       public DbSet<Factura_Game> FacturaJuegos { get; set; }
+       public DbSet<Factura> Facturas { get; set; }
+   
+
+
+
 
 
 

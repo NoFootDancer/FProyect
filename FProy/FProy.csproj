@@ -68,8 +68,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BD\Company.cs" />
+    <Compile Include="BD\Console.cs" />
+    <Compile Include="BD\Factura.cs" />
+    <Compile Include="BD\Factura_Game.cs" />
     <Compile Include="BD\Game.cs" />
+    <Compile Include="BD\Genre.cs" />
     <Compile Include="BD\MiBd.cs" />
+    <Compile Include="BD\Store.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -79,6 +85,22 @@
     <Compile Include="Migrations\201511131625189_Num.cs" />
     <Compile Include="Migrations\201511131625189_Num.Designer.cs">
       <DependentUpon>201511131625189_Num.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181604494_lok.cs" />
+    <Compile Include="Migrations\201511181604494_lok.Designer.cs">
+      <DependentUpon>201511181604494_lok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181611352_lokk.cs" />
+    <Compile Include="Migrations\201511181611352_lokk.Designer.cs">
+      <DependentUpon>201511181611352_lokk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181629588_consolas.cs" />
+    <Compile Include="Migrations\201511181629588_consolas.Designer.cs">
+      <DependentUpon>201511181629588_consolas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181646286_companias.cs" />
+    <Compile Include="Migrations\201511181646286_companias.Designer.cs">
+      <DependentUpon>201511181646286_companias.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -96,6 +118,18 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201511131625189_Num.resx">
       <DependentUpon>201511131625189_Num.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181604494_lok.resx">
+      <DependentUpon>201511181604494_lok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181611352_lokk.resx">
+      <DependentUpon>201511181611352_lokk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181629588_consolas.resx">
+      <DependentUpon>201511181629588_consolas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181646286_companias.resx">
+      <DependentUpon>201511181646286_companias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,10 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FProy.BD
 {
-    class Console
+   public class Console
     {
         [Key]
         public string codcons { get; set; }
         public string namecons { get; set; }
+
+        public virtual ICollection<Game> Games { get; set; }
     }
 }

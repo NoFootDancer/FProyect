@@ -7,10 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FProy.BD
 {
-  public  class Store
-    { [Key]
-      public int idstore { get; set; }
-      public string nameS { get; set; }
+   public class Factura
+    {
+       [Key]
+       public int idFolio { get; set; }
+       public string Fecha { get; set; }
+       public int idStore { get; set; }
 
     }
 }

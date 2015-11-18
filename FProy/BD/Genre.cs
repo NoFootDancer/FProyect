@@ -11,5 +11,7 @@ namespace FProy.BD
         [Key]
         public string codgen { get; set; }
         public string nameg { get; set; }
+
+        public virtual ICollection<Game> Games { get; set; }
     }
 }

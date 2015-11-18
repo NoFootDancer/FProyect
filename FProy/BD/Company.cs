@@ -13,6 +13,7 @@ namespace FProy.BD
        [Key]
        public string codcomp { get; set; }
        public string namec { get; set; }
+       public virtual ICollection<Game> Games { get; set; }
    }
 
 

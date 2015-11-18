@@ -14,9 +14,15 @@ namespace FProy.BD
       public string namej { get; set; }
       public float precio { get; set; }
       public string rdate { get; set; }
-      public string codcomp { get; set; }
-      public string codcons { get; set; }
-      public string codgen { get; set; }
+      public  virtual string codcomp { get; set; }
+      //public virtual string codcons { get; set; }
+      public virtual ICollection<Console> Consolas { get; set; }
+      public virtual string codgen { get; set; }
+
+     // public virtual ICollection<Console> Consolas { get; set; }
+      
+
+
 
 
     }
