@@ -24,5 +24,23 @@ namespace FProy
         {
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FProy.BD.MiBd db = new FProy.BD.MiBd();
+            FProy.BD.Game juego = new FProy.BD.Game();
+
+            juego.idjuego = Convert.ToInt32(tx1.Text);
+            juego.namej  = tx2.Text;
+            juego.precio = Convert.ToSingle(tx3.Text);
+            juego.rdate = tx4.Text;
+            juego.codcomp = tx5.Text;
+            juego.codgen = tx7.Text;
+
+            db.Juegos.Add(juego);
+            db.SaveChanges();
+
+
+        }
     }
 }
