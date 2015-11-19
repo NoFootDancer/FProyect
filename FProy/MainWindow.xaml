@@ -3,21 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox x:Name="tx1" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tx2" HorizontalAlignment="Left" Height="23" Margin="140,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tx3" HorizontalAlignment="Left" Height="23" Margin="260,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tx4" HorizontalAlignment="Left" Height="23" Margin="387,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tx5" HorizontalAlignment="Left" Height="23" Margin="66,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tx6" HorizontalAlignment="Left" Height="23" Margin="191,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tx7" HorizontalAlignment="Left" Height="23" Margin="316,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Genero (Codigo)" HorizontalAlignment="Left" Margin="316,125,0,0" VerticalAlignment="Top"/>
-        <Label Content="Consola (Codigo)" HorizontalAlignment="Left" Margin="191,125,0,0" VerticalAlignment="Top"/>
-        <Label Content="Compañia (codigo)" HorizontalAlignment="Left" Margin="66,125,0,0" VerticalAlignment="Top"/>
-        <Label Content="Fecha de salida" HorizontalAlignment="Left" Margin="387,15,0,0" VerticalAlignment="Top"/>
-        <Label Content="Precio" HorizontalAlignment="Left" Margin="260,15,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="148,15,0,0" VerticalAlignment="Top"/>
-        <Label Content="IdJueg" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
-        <Button Content="&#xD;&#xA;Guardar datos" HorizontalAlignment="Left" Margin="66,213,0,0" VerticalAlignment="Top" Width="370" Height="42" Click="Button_Click_1"/>
+        <TextBox x:Name="tx2" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tx3" HorizontalAlignment="Left" Height="23" Margin="135,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tx3_TextChanged"/>
+        <TextBox x:Name="tx4" HorizontalAlignment="Left" Height="23" Margin="260,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Fecha de salida" HorizontalAlignment="Left" Margin="267,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="boton1" Content="Guardar datos" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top" Width="103" Height="25" Click="Button_Click_1"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cb1_SelectionChanged"/>
+        <ComboBox x:Name="cb2" HorizontalAlignment="Left" Margin="135,124,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb3" HorizontalAlignment="Left" Margin="260,124,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Genero&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label Content="Compañia&#xD;&#xA;" HorizontalAlignment="Left" Margin="135,91,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Consola&#xD;&#xA;" HorizontalAlignment="Left" Margin="260,93,0,0" VerticalAlignment="Top" Height="26"/>
+        <DataGrid HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Height="148" Width="478" SelectionChanged="DataGrid_SelectionChanged_1" Loaded="DataGrid_Loaded_1"/>
 
     </Grid>
 </Window>

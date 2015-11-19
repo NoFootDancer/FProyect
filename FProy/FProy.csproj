@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,6 +62,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CAPCompania.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CAPConsola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CAPGenero.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +90,15 @@
     <Compile Include="BD\Genre.cs" />
     <Compile Include="BD\MiBd.cs" />
     <Compile Include="BD\Store.cs" />
+    <Compile Include="CAPCompania.xaml.cs">
+      <DependentUpon>CAPCompania.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CAPConsola.xaml.cs">
+      <DependentUpon>CAPConsola.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CAPGenero.xaml.cs">
+      <DependentUpon>CAPGenero.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -101,6 +124,14 @@
     <Compile Include="Migrations\201511181646286_companias.cs" />
     <Compile Include="Migrations\201511181646286_companias.Designer.cs">
       <DependentUpon>201511181646286_companias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511182151573_cons.cs" />
+    <Compile Include="Migrations\201511182151573_cons.Designer.cs">
+      <DependentUpon>201511182151573_cons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511190056135_icoleccons.cs" />
+    <Compile Include="Migrations\201511190056135_icoleccons.Designer.cs">
+      <DependentUpon>201511190056135_icoleccons.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -130,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511181646286_companias.resx">
       <DependentUpon>201511181646286_companias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511182151573_cons.resx">
+      <DependentUpon>201511182151573_cons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511190056135_icoleccons.resx">
+      <DependentUpon>201511190056135_icoleccons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
