@@ -19,7 +19,7 @@ namespace FProy.BD
       //public virtual ICollection<Console> Consolas { get; set; }
       public virtual string codgen  { get; set; }
 
-     // public virtual ICollection<Console> Consolas { get; set; }
+    
       
 
 

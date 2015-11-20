@@ -159,6 +159,10 @@
       <DependentUpon>CAPJuegos.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\201511131625189_Num.cs" />
@@ -193,7 +197,14 @@
     <Compile Include="Migrations\201511200611111_conso.Designer.cs">
       <DependentUpon>201511200611111_conso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511201525512_nun.cs" />
+    <Compile Include="Migrations\201511201525512_nun.Designer.cs">
+      <DependentUpon>201511201525512_nun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -230,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511200611111_conso.resx">
       <DependentUpon>201511200611111_conso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511201525512_nun.resx">
+      <DependentUpon>201511201525512_nun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

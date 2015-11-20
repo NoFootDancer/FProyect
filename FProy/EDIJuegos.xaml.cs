@@ -54,12 +54,19 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
 
             int idGame = (int)cb1.SelectedValue;
-            var cons = from s in db.Juegos
+           var cons = from s in db.Juegos
 
                        where s.idjuego == idGame
                        select s;
+           dbg.ItemsSource = cons.ToList();
 
-            dbg.ItemsSource = cons.ToList();
+            var cons1 = db.Juegos.SingleOrDefault(s => s.idjuego == idGame);
+            t1.Text = cons1.namej;
+            t2.Text = Convert.ToString(cons1.precio);
+            t3.Text = cons1.rdate;
+
+            
+          
 
         
 
