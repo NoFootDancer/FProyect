@@ -35,5 +35,21 @@ namespace FProy
             db.Consolas.Add(con);
             db.SaveChanges();
         }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+
+            EDIConsola vent = new EDIConsola();
+            vent.Show();
+            this.Close();
+
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            BORConsola vent1 = new BORConsola();
+            vent1.Show();
+            this.Close();
+        }
     }
 }

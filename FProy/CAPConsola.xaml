@@ -3,11 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="CAPConsola" Height="300" Width="300">
     <Grid>
-        <Button x:Name="btn" Content="Registrar" HorizontalAlignment="Left" Margin="113,227,0,0" VerticalAlignment="Top" Width="75" Click="btn_Click"/>
+        <Button x:Name="btn" Content="Registrar" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="272" Click="btn_Click"/>
         <Label Content="Codigo&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
         <Label Content="Consola Nombre&#xD;&#xA;" HorizontalAlignment="Left" Margin="167,94,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tx1" HorizontalAlignment="Left" Height="23" Margin="10,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tx2" HorizontalAlignment="Left" Height="23" Margin="167,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn2" Content="Editar datos" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Width="75" Click="btn2_Click"/>
+        <Button x:Name="btn3" Content="Borrar datos" HorizontalAlignment="Left" Margin="207,239,0,0" VerticalAlignment="Top" Width="75" Click="btn3_Click"/>
 
     </Grid>
 </Window>

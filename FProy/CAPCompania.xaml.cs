@@ -36,5 +36,20 @@ namespace FProy
             db.SaveChanges();
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            EDICompania vent = new EDICompania();
+            vent.Show();
+            this.Close();
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            BORCompania vent1 = new BORCompania();
+            vent1.Show();
+            this.Close();
+        }
     }
 }

@@ -36,7 +36,8 @@ namespace FProy
             juego.rdate = tx4.Text;
             juego.codgen =  (String)cb1.SelectedValue;
             juego.codcomp = (String)cb2.SelectedValue;
-           //juego.codcons = (String)cb3.SelectedValue;
+            juego.codcons = (String)cb3.SelectedValue;
+            //juego.codcons = (String)cb3.SelectedValue;
 
             db.Juegos.Add(juego);
             db.SaveChanges();
@@ -82,6 +83,29 @@ namespace FProy
             cb3.SelectedValuePath = "codcons";
             
 
+        }
+
+        private void ver_Click(object sender, RoutedEventArgs e)
+        {
+            FProy.BD.MiBd db = new FProy.BD.MiBd();
+
+            var cons = from s in db.Juegos
+                       select s;
+            dbg.ItemsSource = cons.ToList();
+        }
+
+        private void Borrar_juegos_Click(object sender, RoutedEventArgs e)
+        {
+            BORJuegos vent = new BORJuegos();
+            vent.Show();
+            this.Close();
+        }
+
+        private void Editar_juegos_Click(object sender, RoutedEventArgs e)
+        {
+            EDIJuegos vent1 = new EDIJuegos();
+            vent1.Show();
+            this.Close();
         }
     }
 }

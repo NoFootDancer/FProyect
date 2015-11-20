@@ -16,7 +16,10 @@
         <Label Content="Genero&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Height="26"/>
         <Label Content="Compañia&#xD;&#xA;" HorizontalAlignment="Left" Margin="135,91,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Consola&#xD;&#xA;" HorizontalAlignment="Left" Margin="260,93,0,0" VerticalAlignment="Top" Height="26"/>
-        <DataGrid HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Height="148" Width="478" SelectionChanged="DataGrid_SelectionChanged_1" Loaded="DataGrid_Loaded_1"/>
+        <DataGrid x:Name="dbg" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Height="148" Width="370" SelectionChanged="DataGrid_SelectionChanged_1" Loaded="DataGrid_Loaded_1"/>
+        <Button x:Name="ver" Content="Ver juegos" HorizontalAlignment="Left" Margin="385,284,0,0" VerticalAlignment="Top" Width="103" Click="ver_Click"/>
+        <Button x:Name="Borrar_juegos" Content="Borrar juegos" HorizontalAlignment="Left" Margin="385,170,0,0" VerticalAlignment="Top" Width="103" Click="Borrar_juegos_Click"/>
+        <Button x:Name="Editar_juegos" Content="Editar juegos" HorizontalAlignment="Left" Margin="385,216,0,0" VerticalAlignment="Top" Width="103" Click="Editar_juegos_Click"/>
 
     </Grid>
 </Window>

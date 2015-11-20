@@ -10,14 +10,14 @@ namespace FProy.BD
   public class Game
     {
       [Key]
-      public int idjuego { get; set; }
+      public int idjuego  { get; set; }
       public string namej { get; set; }
-      public float precio { get; set; }
+      public float  precio{ get; set; }
       public string rdate { get; set; }
-      public  virtual string codcomp { get; set; }
-      //public virtual string codcons { get; set; }
-      public virtual ICollection<Console> Consolas { get; set; }
-      public virtual string codgen { get; set; }
+      public virtual string codcomp { get; set; }
+      public virtual string codcons { get; set; }
+      //public virtual ICollection<Console> Consolas { get; set; }
+      public virtual string codgen  { get; set; }
 
      // public virtual ICollection<Console> Consolas { get; set; }
       

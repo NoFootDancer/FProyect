@@ -35,5 +35,19 @@ namespace FProy
             db.Generos.Add(gen);
             db.SaveChanges();
         }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            EDIGenero vent=new EDIGenero();
+            vent.Show();
+            this.Close();
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            BORGenero vent1 = new BORGenero();
+            vent1.Show();
+            this.Close();
+        }
     }
 }
