@@ -1,0 +1,49 @@
+            //GRID
+ FProy.BD.MiBd db = new FProy.BD.MiBd();
+            cb1.ItemsSource = db.Companias.ToList();
+            cb1.DisplayMemberPath = "namec";
+            cb1.SelectedValuePath = "idcomp";
+
+
+
+
+
+         //EDITAR
+
+FProy.BD.MiBd db =new FProy.BD.MiBd();
+            String id = (String)cb1.SelectedValue;
+
+            var cons = db.Companias.SingleOrDefault(s => s.codcomp == id);
+            
+
+            if (cons != null)
+            {
+                cons.namec = Convert.ToString(txt1.Text);
+                db.SaveChanges();
+            }
+            
+
+
+         // BORRAR
+
+
+FProy.BD.MiBd db = new FProy.BD.MiBd();
+            String id = (String)cb1.SelectedValue;
+
+           var cons = db.Companias.SingleOrDefault(s => s.codcomp == id);
+           
+            if (cons != null) {
+                db.Companias.Remove(cons);
+                db.SaveChanges();
+            } 
+            
+
+
+        //VER DATOS
+
+
+            FProy.BD.MiBd db = new FProy.BD.MiBd();
+
+            var cons = from s in db.Companias
+                       select s;
+            dbg.ItemsSource = cons.ToList();
