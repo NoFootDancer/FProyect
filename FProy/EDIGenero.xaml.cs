@@ -38,6 +38,7 @@ namespace FProy
         private void dbg1_Loaded(object sender, RoutedEventArgs e)
         {
             FProy.BD.MiBd db = new FProy.BD.MiBd();
+
             cb1.ItemsSource = db.Generos.ToList();
             cb1.DisplayMemberPath = "nameg";
             cb1.SelectedValuePath = "codgen";

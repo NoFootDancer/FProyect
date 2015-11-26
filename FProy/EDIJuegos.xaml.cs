@@ -54,6 +54,7 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
 
             int idGame = (int)cb1.SelectedValue;
+
            var cons = from s in db.Juegos
 
                        where s.idjuego == idGame
