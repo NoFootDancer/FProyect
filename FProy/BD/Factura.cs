@@ -14,5 +14,6 @@ namespace FProy.BD
        public string Fecha { get; set; }
        public int idStore { get; set; }
 
+       public virtual ICollection<Game> Juegos { get; set; }
     }
 }

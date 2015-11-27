@@ -64,7 +64,7 @@ namespace FProy
             var cons1 = db.Juegos.SingleOrDefault(s => s.idjuego == idGame);
             t1.Text = cons1.namej;
             t2.Text = Convert.ToString(cons1.precio);
-            t3.Text = cons1.rdate;
+            t3.Text = Convert.ToString(cons1.rdate);
 
             
           
@@ -95,9 +95,9 @@ namespace FProy
 
             if (cons != null)
             {
-                cons.namej = Convert.ToString(t1.Text);
+                cons.namej =  Convert.ToString(t1.Text);
                 cons.precio = Convert.ToSingle(t2.Text);
-                cons.rdate = (String)t3.Text;
+                cons.rdate = t3.DisplayDate;
 
                 cons.codgen = (String)cb2.SelectedValue;
                 cons.codcons = (String)cb3.SelectedValue;

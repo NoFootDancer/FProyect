@@ -33,7 +33,7 @@ namespace FProy
 
             juego.namej = tx2.Text;
             juego.precio = Convert.ToSingle(tx3.Text);
-            juego.rdate = tx4.Text;
+            juego.rdate = dp1.SelectedDate.Value;
             juego.codgen =  (String)cb1.SelectedValue;
             juego.codcomp = (String)cb2.SelectedValue;
             juego.codcons = (String)cb3.SelectedValue;

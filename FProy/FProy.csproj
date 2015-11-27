@@ -117,7 +117,6 @@
     <Compile Include="BD\Company.cs" />
     <Compile Include="BD\Console.cs" />
     <Compile Include="BD\Factura.cs" />
-    <Compile Include="BD\Factura_Game.cs" />
     <Compile Include="BD\Game.cs" />
     <Compile Include="BD\Genre.cs" />
     <Compile Include="BD\MiBd.cs" />
@@ -201,6 +200,14 @@
     <Compile Include="Migrations\201511201525512_nun.Designer.cs">
       <DependentUpon>201511201525512_nun.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511271529380_mam.cs" />
+    <Compile Include="Migrations\201511271529380_mam.Designer.cs">
+      <DependentUpon>201511271529380_mam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511271603461_nen.cs" />
+    <Compile Include="Migrations\201511271603461_nen.Designer.cs">
+      <DependentUpon>201511271603461_nen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
@@ -244,6 +251,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511201525512_nun.resx">
       <DependentUpon>201511201525512_nun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271529380_mam.resx">
+      <DependentUpon>201511271529380_mam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271603461_nen.resx">
+      <DependentUpon>201511271603461_nen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
