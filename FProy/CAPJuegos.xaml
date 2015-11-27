@@ -5,14 +5,13 @@
     <Grid>
         <TextBox x:Name="tx2" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tx3" HorizontalAlignment="Left" Height="23" Margin="135,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tx3_TextChanged"/>
-        <TextBox x:Name="tx4" HorizontalAlignment="Left" Height="23" Margin="260,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Fecha de salida" HorizontalAlignment="Left" Margin="267,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Precio" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="boton1" Content="Guardar datos" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top" Width="103" Height="25" Click="Button_Click_1"/>
         <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cb1_SelectionChanged"/>
         <ComboBox x:Name="cb2" HorizontalAlignment="Left" Margin="135,124,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cb3" HorizontalAlignment="Left" Margin="260,124,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb3" HorizontalAlignment="Left" Margin="260,123,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Genero&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Height="26"/>
         <Label Content="Compañia&#xD;&#xA;" HorizontalAlignment="Left" Margin="135,91,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Consola&#xD;&#xA;" HorizontalAlignment="Left" Margin="260,93,0,0" VerticalAlignment="Top" Height="26"/>
@@ -20,6 +19,7 @@
         <Button x:Name="ver" Content="Ver juegos" HorizontalAlignment="Left" Margin="385,284,0,0" VerticalAlignment="Top" Width="103" Click="ver_Click"/>
         <Button x:Name="Borrar_juegos" Content="Borrar juegos" HorizontalAlignment="Left" Margin="385,170,0,0" VerticalAlignment="Top" Width="103" Click="Borrar_juegos_Click"/>
         <Button x:Name="Editar_juegos" Content="Editar juegos" HorizontalAlignment="Left" Margin="385,216,0,0" VerticalAlignment="Top" Width="103" Click="Editar_juegos_Click"/>
+        <DatePicker x:Name="tx4" HorizontalAlignment="Left" Margin="278,41,0,0" VerticalAlignment="Top" IsEnabled="False"/>
 
     </Grid>
 </Window>

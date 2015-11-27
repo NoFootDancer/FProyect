@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,11 +30,34 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
             FProy.BD.Company com = new FProy.BD.Company();
 
-            com.codcomp = tx1.Text;
-            com.namec = tx2.Text;
 
-            db.Companias.Add(com);
-            db.SaveChanges();
+
+            if (tx1.Text.Length > 3)
+            {
+                MessageBox.Show("El codigo de la consola solo requiere 3 caracteres. Vuelva a intentarlo");
+            }//Validar longitud
+            else
+            {
+
+                if (Regex.IsMatch(tx1.Text, "[a-zA-Z]") && Regex.IsMatch(tx2.Text, "[a-zA-Z0-9]+$"))
+                {
+
+                    com.codcomp = tx1.Text;
+                    com.namec = tx2.Text;
+
+                    db.Companias.Add(com);
+                    db.SaveChanges();
+                    
+                    MessageBox.Show("Captura Realizada correctamente");
+
+
+                }
+                else { MessageBox.Show("No se admiten numeros o caracteres especiales"); }//Validar texto
+
+            }
+
+
+
 
         }
 

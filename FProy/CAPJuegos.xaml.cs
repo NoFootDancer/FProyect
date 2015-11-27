@@ -81,7 +81,10 @@ namespace FProy
             cb3.ItemsSource = db.Consolas.ToList();
             cb3.DisplayMemberPath = "namecons";
             cb3.SelectedValuePath = "codcons";
-            
+
+            cb1.SelectedIndex = 0;
+            cb2.SelectedIndex = 0;
+            cb3.SelectedIndex = 0;
 
         }
 
