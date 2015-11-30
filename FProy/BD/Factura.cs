@@ -11,8 +11,11 @@ namespace FProy.BD
     {
        [Key]
        public int idFolio { get; set; }
-       public string Fecha { get; set; }
+       public DateTime Fecha { get; set; }
        public int idStore { get; set; }
+       public string datos { get; set; }
+
+       
 
        public virtual ICollection<Game> Juegos { get; set; }
     }

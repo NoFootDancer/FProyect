@@ -90,6 +90,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CEBTienda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Compra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EDICompania.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +149,12 @@
     </Compile>
     <Compile Include="CAPGenero.xaml.cs">
       <DependentUpon>CAPGenero.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CEBTienda.xaml.cs">
+      <DependentUpon>CEBTienda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Compra.xaml.cs">
+      <DependentUpon>Compra.xaml</DependentUpon>
     </Compile>
     <Compile Include="EDICompania.xaml.cs">
       <DependentUpon>EDICompania.xaml</DependentUpon>
@@ -204,9 +218,21 @@
     <Compile Include="Migrations\201511271529380_mam.Designer.cs">
       <DependentUpon>201511271529380_mam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511271603461_nen.cs" />
-    <Compile Include="Migrations\201511271603461_nen.Designer.cs">
-      <DependentUpon>201511271603461_nen.cs</DependentUpon>
+    <Compile Include="Migrations\201511280252338_jjjjj.cs" />
+    <Compile Include="Migrations\201511280252338_jjjjj.Designer.cs">
+      <DependentUpon>201511280252338_jjjjj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511280335428_tim.cs" />
+    <Compile Include="Migrations\201511280335428_tim.Designer.cs">
+      <DependentUpon>201511280335428_tim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511300334453_masdato.cs" />
+    <Compile Include="Migrations\201511300334453_masdato.Designer.cs">
+      <DependentUpon>201511300334453_masdato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511300739468_fechafact.cs" />
+    <Compile Include="Migrations\201511300739468_fechafact.Designer.cs">
+      <DependentUpon>201511300739468_fechafact.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Principal.xaml.cs">
@@ -255,8 +281,17 @@
     <EmbeddedResource Include="Migrations\201511271529380_mam.resx">
       <DependentUpon>201511271529380_mam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511271603461_nen.resx">
-      <DependentUpon>201511271603461_nen.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511280252338_jjjjj.resx">
+      <DependentUpon>201511280252338_jjjjj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511280335428_tim.resx">
+      <DependentUpon>201511280335428_tim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511300334453_masdato.resx">
+      <DependentUpon>201511300334453_masdato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511300739468_fechafact.resx">
+      <DependentUpon>201511300739468_fechafact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

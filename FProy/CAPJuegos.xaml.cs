@@ -30,21 +30,43 @@ namespace FProy
         {
             FProy.BD.MiBd db = new FProy.BD.MiBd();
             FProy.BD.Game juego = new FProy.BD.Game();
+            if (Convert.ToString(dp1.SelectedDate.Value) == "" )
+            {
 
-            juego.namej = tx2.Text;
-            juego.precio = Convert.ToSingle(tx3.Text);
-            juego.rdate = dp1.SelectedDate.Value;
-            juego.codgen =  (String)cb1.SelectedValue;
-            juego.codcomp = (String)cb2.SelectedValue;
-            juego.codcons = (String)cb3.SelectedValue;
-            //juego.codcons = (String)cb3.SelectedValue;
+                MessageBox.Show("Introduce una fecha valida"+dp1.SelectedDate.Value);
 
-            db.Juegos.Add(juego);
-            db.SaveChanges();
+            }
+                if (String.IsNullOrEmpty(tx2.Text))
+                {
+
+                    MessageBox.Show("No se puede registrar un juego sin un nombre.");
+                }
+                else
+                {
+                    if (Regex.IsMatch(tx3.Text, "^[0-9]*$"))
+                    {
+
+                        juego.namej = tx2.Text;
+                        juego.precio = Convert.ToInt32(tx3.Text);
+                        juego.rdate = dp1.SelectedDate.Value;
+                        juego.codgen = (String)cb1.SelectedValue;
+                        juego.codcomp = (String)cb2.SelectedValue;
+                        juego.codcons = (String)cb3.SelectedValue;
 
 
-           
+                        db.Juegos.Add(juego);
+                        db.SaveChanges();
 
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Utilice números solamente para el precio, sin simbolos o caracteres especiales.");
+                    }
+
+
+                }
+            
         }
 
         private void Boton2_Click(object sender, RoutedEventArgs e)

@@ -19,7 +19,7 @@
         <Button x:Name="ver" Content="Ver juegos" HorizontalAlignment="Left" Margin="385,284,0,0" VerticalAlignment="Top" Width="103" Click="ver_Click"/>
         <Button x:Name="Borrar_juegos" Content="Borrar juegos" HorizontalAlignment="Left" Margin="385,170,0,0" VerticalAlignment="Top" Width="103" Click="Borrar_juegos_Click"/>
         <Button x:Name="Editar_juegos" Content="Editar juegos" HorizontalAlignment="Left" Margin="385,216,0,0" VerticalAlignment="Top" Width="103" Click="Editar_juegos_Click"/>
-        <DatePicker x:Name="dp1" HorizontalAlignment="Left" Margin="278,41,0,0" VerticalAlignment="Top" Focusable="False"/>
+        <DatePicker x:Name="dp1" HorizontalAlignment="Left" Margin="278,41,0,0" VerticalAlignment="Top" Focusable="False" DisplayDate="12/12/2015" SelectedDate="2015-12-12" />
 
     </Grid>
 </Window>

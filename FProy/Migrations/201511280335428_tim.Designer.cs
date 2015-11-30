@@ -7,13 +7,13 @@ namespace FProy.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class nen : IMigrationMetadata
+    public sealed partial class tim : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(nen));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(tim));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511271603461_nen"; }
+            get { return "201511280335428_tim"; }
         }
         
         string IMigrationMetadata.Source

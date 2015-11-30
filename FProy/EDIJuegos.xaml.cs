@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,6 +45,13 @@ namespace FProy
             cb4.ItemsSource = db.Companias.ToList();
             cb4.DisplayMemberPath = "namec";
             cb4.SelectedValuePath = "codcomp";
+
+            cb1.SelectedIndex = 0;
+            cb2.SelectedIndex = 0;
+            cb3.SelectedIndex = 0;
+            cb4.SelectedIndex = 0;
+
+            Ver1.IsEnabled = false;
 
         
         
@@ -90,21 +98,71 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
             int id = (Int32)cb1.SelectedValue;
 
-            var cons = db.Juegos.SingleOrDefault(s => s.idjuego == id);
-
-
-            if (cons != null)
+            if (String.IsNullOrEmpty(t1.Text))
             {
-                cons.namej =  Convert.ToString(t1.Text);
-                cons.precio = Convert.ToSingle(t2.Text);
-                cons.rdate = t3.DisplayDate;
 
-                cons.codgen = (String)cb2.SelectedValue;
-                cons.codcons = (String)cb3.SelectedValue;
-                cons.codcomp = (String)cb4.SelectedValue;
-
-                db.SaveChanges();
+                MessageBox.Show("No se puede registrar un juego sin un nombre.");
             }
+            else
+            {
+                if (Regex.IsMatch(t2.Text, "^[0-9]*$"))
+                {
+
+                    var cons = db.Juegos.SingleOrDefault(s => s.idjuego == id);
+                    if (cons != null)
+                    {
+                        cons.namej = Convert.ToString(t1.Text);
+                        cons.precio = Convert.ToSingle(t2.Text);
+                        cons.rdate = t3.SelectedDate.Value;
+
+                        cons.codgen = (String)cb2.SelectedValue;
+                        cons.codcons = (String)cb3.SelectedValue;
+                        cons.codcomp = (String)cb4.SelectedValue;
+
+                        db.SaveChanges();
+                    }
+                }
+                else { MessageBox.Show("Introduce solo números en el precio"); }
+            }
+
+
+          
+
+            int idGame = (int)cb1.SelectedValue;
+
+            var cons3 = from s in db.Juegos
+
+                       where s.idjuego == idGame
+                       select s;
+            dbg.ItemsSource = cons3.ToList();
+
+
+
+        }
+
+
+        private void cb1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+
+
+
+            FProy.BD.MiBd db = new FProy.BD.MiBd();
+
+            int idGame = (int)cb1.SelectedValue;
+
+            var cons2 = from s in db.Juegos
+
+                        where s.idjuego == idGame
+                        select s;
+            dbg.ItemsSource = cons2.ToList();
+
+            var cons1 = db.Juegos.SingleOrDefault(s => s.idjuego == idGame);
+            t1.Text = cons1.namej;
+            t2.Text = Convert.ToString(cons1.precio);
+            t3.Text = Convert.ToString(cons1.rdate);
+
+            
 
         }
     }

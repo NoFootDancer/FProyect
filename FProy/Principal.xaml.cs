@@ -48,5 +48,17 @@ namespace FProy
             CAPConsola vent3 = new CAPConsola();
             vent3.Show();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            CEBTienda vent4 = new CEBTienda();
+            vent4.Show();
+        }
+
+        private void COM_Click(object sender, RoutedEventArgs e)
+        {
+            Compra vent5 = new Compra();
+            vent5.Show();
+        }
     }
 }

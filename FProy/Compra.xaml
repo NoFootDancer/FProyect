@@ -1,0 +1,27 @@
+﻿<Window x:Class="FProy.Compra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Compra" Height="300" Width="567.164">
+    <Grid>
+        <Label Content="Juego" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cb1_SelectionChanged"/>
+        <Label Content="Consola" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="tx1" HorizontalAlignment="Left" Height="23" Margin="75,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Tienda" HorizontalAlignment="Left" Margin="17,76,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cb2" HorizontalAlignment="Left" Margin="75,80,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Genero" HorizontalAlignment="Left" Margin="17,107,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tx2" HorizontalAlignment="Left" Height="23" Margin="75,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Costo:" HorizontalAlignment="Left" Margin="24,138,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tx3" HorizontalAlignment="Left" Height="23" Margin="75,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="com" Content="Comprar" HorizontalAlignment="Left" Margin="120,170,0,0" VerticalAlignment="Top" Width="75" Click="com_Click"/>
+        <Button x:Name="emp" Content="Vaciar" HorizontalAlignment="Left" Margin="120,195,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="dg" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Height="249" Width="309" Loaded="dg_Loaded" SelectionChanged="dg_SelectionChanged">
+            <DataGrid.ItemBindingGroup>
+                <BindingGroup/>
+            </DataGrid.ItemBindingGroup>
+        </DataGrid>
+        <Button x:Name="add" Content="Añadir" HorizontalAlignment="Left" Margin="120,220,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
+        <Label x:Name="cTotal" Content="Total: $" HorizontalAlignment="Left" Margin="24,233,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,26 +1,26 @@
 ﻿<Window x:Class="FProy.EDIJuegos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="EDIJuegos" Height="300" Width="716.418">
+        Title="EDIJuegos" Height="300" Width="900.418">
     <Grid>
         <DataGrid x:Name="dbg" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Height="150" Width="604" Loaded="dbg_Loaded"/>
         <Button x:Name="Ver" Content="Ver todos&#xD;&#xA;los juegos" HorizontalAlignment="Left" Margin="623,196,0,0" VerticalAlignment="Top" Width="75" Click="Ver_Click"/>
         <Button x:Name="Ver1" Content="Ver juego &#xD;&#xA;seleccionado" HorizontalAlignment="Left" Margin="623,155,0,0" VerticalAlignment="Top" Width="75" Click="Ver1_Click"/>
         <Label Content="ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="50"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="50" SelectionChanged="cb1_SelectionChanged"/>
         <Label Content="Nuevo nombre" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="t1" HorizontalAlignment="Left" Height="23" Margin="65,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Nuevo Precio " HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="t2" HorizontalAlignment="Left" Height="23" Margin="190,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"/>
         <Label Content="Nueva Fecha" HorizontalAlignment="Left" Margin="279,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cb2" HorizontalAlignment="Left" Margin="377,36,0,0" VerticalAlignment="Top" Width="87"/>
-        <ComboBox x:Name="cb3" HorizontalAlignment="Left" Margin="491,36,0,0" VerticalAlignment="Top" Width="90"/>
-        <ComboBox x:Name="cb4" HorizontalAlignment="Left" Margin="602,36,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Nuevo Genero" HorizontalAlignment="Left" Margin="377,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nueva Consola" HorizontalAlignment="Left" Margin="491,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nueva Compañia" HorizontalAlignment="Left" Margin="602,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cb2" HorizontalAlignment="Left" Margin="464,36,0,0" VerticalAlignment="Top" Width="87"/>
+        <ComboBox x:Name="cb3" HorizontalAlignment="Left" Margin="561,36,0,0" VerticalAlignment="Top" Width="90"/>
+        <ComboBox x:Name="cb4" HorizontalAlignment="Left" Margin="672,36,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Nuevo Genero" HorizontalAlignment="Left" Margin="464,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nueva Consola" HorizontalAlignment="Left" Margin="561,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nueva Compañia" HorizontalAlignment="Left" Margin="672,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="reg" Content="Registrar cambios" HorizontalAlignment="Left" Margin="531,84,0,0" VerticalAlignment="Top" Width="157" Click="reg_Click"/>
-        <DatePicker x:Name="t3" HorizontalAlignment="Left" Margin="279,36,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="t3" HorizontalAlignment="Left" Margin="279,36,0,0" VerticalAlignment="Top" Focusable="False"/>
 
     </Grid>
 </Window>

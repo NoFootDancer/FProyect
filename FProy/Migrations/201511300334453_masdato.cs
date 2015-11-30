@@ -3,16 +3,16 @@ namespace FProy.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class nen : DbMigration
+    public partial class masdato : DbMigration
     {
         public override void Up()
         {
-            AlterColumn("dbo.Games", "rdate", c => c.DateTime(nullable: false));
+            AddColumn("dbo.Facturas", "datos", c => c.String());
         }
         
         public override void Down()
         {
-            AlterColumn("dbo.Games", "rdate", c => c.String());
+            DropColumn("dbo.Facturas", "datos");
         }
     }
 }
