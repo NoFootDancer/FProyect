@@ -246,6 +246,10 @@
     <Compile Include="Migrations\201512010310396_listas.Designer.cs">
       <DependentUpon>201512010310396_listas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512011619547_list-juegos.cs" />
+    <Compile Include="Migrations\201512011619547_list-juegos.Designer.cs">
+      <DependentUpon>201512011619547_list-juegos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
@@ -313,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512010310396_listas.resx">
       <DependentUpon>201512010310396_listas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512011619547_list-juegos.resx">
+      <DependentUpon>201512011619547_list-juegos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

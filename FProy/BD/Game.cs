@@ -23,11 +23,6 @@ namespace FProy.BD
 
       
 
-      internal void Show()
-      {
-          throw new NotImplementedException();
-      }
-
 
 
     }

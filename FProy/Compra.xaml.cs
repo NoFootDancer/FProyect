@@ -148,13 +148,14 @@ namespace FProy
                             fact.Fecha = DateTime.Now;
                             fact.idStore = (int)cb2.SelectedValue;
                             fact.datos = Convert.ToString("Juego: " + cb1.SelectedValue + " Para consola: " + tx1.Text + " Del genero: " + tx2.Text + "Precio: " + tx3.Text);
-                            
+                           
                             
                             
                             foreach (var juego in Carrito)
                             {
-                                FProy.BD.Game Gg = db.Juegos.SingleOrDefault(s => s.idjuego == juego.idjuego);
-
+                                //FProy.BD.Game Gg = db.Juegos.SingleOrDefault(s => s.idjuego == juego.idjuego);
+                                Game g = db.Juegos.SingleOrDefault(s => s.idjuego == juego.idjuego);
+                                fact.Juegos.Add(g);
                             }
 
                             db.Facturas.Add(fact);
