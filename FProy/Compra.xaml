@@ -14,7 +14,7 @@
         <Label Content="Costo:" HorizontalAlignment="Left" Margin="24,138,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tx3" HorizontalAlignment="Left" Height="23" Margin="75,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Button x:Name="com" Content="Comprar" HorizontalAlignment="Left" Margin="120,170,0,0" VerticalAlignment="Top" Width="75" Click="com_Click"/>
-        <Button x:Name="emp" Content="Vaciar" HorizontalAlignment="Left" Margin="120,195,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="emp" Content="Vaciar" HorizontalAlignment="Left" Margin="120,195,0,0" VerticalAlignment="Top" Width="75" Click="emp_Click"/>
         <DataGrid x:Name="dg" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Height="249" Width="309" Loaded="dg_Loaded" SelectionChanged="dg_SelectionChanged">
             <DataGrid.ItemBindingGroup>
                 <BindingGroup/>

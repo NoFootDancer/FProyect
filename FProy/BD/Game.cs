@@ -18,12 +18,15 @@ namespace FProy.BD
       public virtual string codcons { get; set; }
       //public virtual ICollection<Console> Consolas { get; set; }
       public virtual string codgen  { get; set; }
-
       public virtual ICollection<Factura> Facturas { get; set; }
 
-    
+
       
 
+      internal void Show()
+      {
+          throw new NotImplementedException();
+      }
 
 
 

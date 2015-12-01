@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
+using FProy.BD;
 
 namespace FProy
 {
@@ -22,18 +23,18 @@ namespace FProy
     public partial class Compra : Window
     {
         private FProy.BD.Game tmpG = null;
-        private List<FProy.BD.Game> Carrito;
+        private List<Game> Carrito;
         public Compra()
         {
             InitializeComponent();
-            Carrito = new List<BD.Game>();
+            Carrito = new List<Game>();
         }
 
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
-            FProy.BD.MiBd db = new FProy.BD.MiBd();
-            FProy.BD.Store st = new FProy.BD.Store();
-            FProy.BD.Game gm = new FProy.BD.Game();
+            MiBd db = new  MiBd();
+            Store st = new Store();
+            Game gm = new  Game();
 
            
 
@@ -52,7 +53,7 @@ namespace FProy
 
         private void cb1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FProy.BD.MiBd db = new FProy.BD.MiBd();
+            MiBd db = new MiBd();
 
             int idGame = (int)cb1.SelectedValue;
 
@@ -72,7 +73,7 @@ namespace FProy
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            FProy.BD.MiBd db = new FProy.BD.MiBd();
+            MiBd db = new MiBd();
             int Id = (int)cb1.SelectedValue;
             FProy.BD.Game Gg = db.Juegos.SingleOrDefault(x => x.idjuego == Id);
             tmpG = Gg;
@@ -112,6 +113,21 @@ namespace FProy
 
         }
 
+        private void borrar() {
+            Carrito = new List<FProy.BD.Game>();
+            tx1.Text = string.Empty;
+            tx2.Text = string.Empty;
+            tx3.Text = string.Empty;
+
+            cb1.SelectedIndex = 0;
+            cb2.SelectedIndex = 0;
+
+            dg.ItemsSource = null;
+            dg.Items.Refresh();
+            tmpG = null;
+        
+        }
+
         private void dg_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -119,70 +135,59 @@ namespace FProy
 
         private void com_Click(object sender, RoutedEventArgs e)
         {
-            //FProy.BD.MiBd db = new BD.MiBd();
-            //FProy.BD.Factura fact = new FProy.BD.Factura();
-
-            //fact.datos = "meh";
-            //fact.Fecha = DateTime.Now;
-            //fact.idStore = (int)cb2.SelectedValue;
-
-            ////db.Facturas.Add(fact);
-            ////db.SaveChanges();
-            
-            
-            //fact.Juegos = db.Juegos.SingleOrDefault(x => x.idjuego == (int)cb1.SelectedValue);
-
-
-            if (Carrito.Count > 0)
+            //Asegurarse de que el carro tenga por lo menos un juego
+            if (Carrito.Count > 0 && cb2.SelectedIndex > -1)
             {
-
-                using (FProy.BD.MiBd db = new FProy.BD.MiBd())
-                {
-                    using (var dbtrans = db.Database.BeginTransaction())
-                    {
-
+                using (FProy.BD.MiBd db = new FProy.BD.MiBd()) {
+                    using (var trans = db.Database.BeginTransaction()) {
                         try
                         {
+                            //Objeto de factura
                             FProy.BD.Factura fact = new FProy.BD.Factura();
+                            FProy.BD.Game gm = new FProy.BD.Game();
                             fact.Fecha = DateTime.Now;
                             fact.idStore = (int)cb2.SelectedValue;
-                            fact.datos = "ETC";
-                           // fact.Juegos = db.Juegos.SingleOrDefault(w => w.idjuego == (int)cb1.SelectedValue);
-                            //fact.Juegos= db.Juegos.SingleOrDefault(s => s.idjuego == (int)cb1.SelectedValue);
-
-                           // db.Facturas.Add(fact);
-                           // db.SaveChanges();
-                           // dbtrans.Commit();
-
-
-
+                            fact.datos = Convert.ToString("Juego: " + cb1.SelectedValue + " Para consola: " + tx1.Text + " Del genero: " + tx2.Text + "Precio: " + tx3.Text);
+                            
+                            
+                            
                             foreach (var juego in Carrito)
-                             {
-                                 FProy.BD.Game g = db.Juegos.SingleOrDefault(i => i.idjuego == juego.idjuego);
-                                 
+                            {
+                                FProy.BD.Game Gg = db.Juegos.SingleOrDefault(s => s.idjuego == juego.idjuego);
 
-                                 db.Facturas.Add(fact);
-                                 db.SaveChanges();
-                                 dbtrans.Commit();
+                            }
+
+                            db.Facturas.Add(fact);
+                            db.SaveChanges();
+                            trans.Commit();
+                            MessageBox.Show(string.Format("Transaction #{0}  completada", fact.idFolio), "exitosamente", MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+
+                        }//try
+                        catch {
 
 
-                             }
+                            //if an error is produced, we rollback everything
+                            trans.Rollback();
+                            //We notify the user of the error
+                            MessageBox.Show("Error de compra, imposible procesar compra", "Error Fatal", MessageBoxButton.OK,
+                                MessageBoxImage.Error);
+                        
                         }
-                        catch
-                        {
-                            dbtrans.Rollback();
-                            MessageBox.Show("Transaction Error, unable to generate invoice", "Fatal Error", MessageBoxButton.OK,
-                                    MessageBoxImage.Error);
-                        }
-                    }
-                }
+                         
+                    
+                    
+                                }//Crear transacción
 
-            }
-            else
-            {
-                MessageBox.Show("Please select at least one product and a Sales Person", "Data Error",
-                        MessageBoxButton.OK, MessageBoxImage.Stop);
-            }
+                                }//Crear enlace a bd
+            }//Contador de items en carro
+
+           
+        }
+
+        private void emp_Click(object sender, RoutedEventArgs e)
+        {
+            borrar();
         }
     }
 }

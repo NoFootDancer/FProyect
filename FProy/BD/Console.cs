@@ -14,5 +14,12 @@ namespace FProy.BD
         public string namecons { get; set; }
 
         public virtual ICollection<Game> Games { get; set; }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

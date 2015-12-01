@@ -234,6 +234,18 @@
     <Compile Include="Migrations\201511300739468_fechafact.Designer.cs">
       <DependentUpon>201511300739468_fechafact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511300931037_ff.cs" />
+    <Compile Include="Migrations\201511300931037_ff.Designer.cs">
+      <DependentUpon>201511300931037_ff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512010307015_jijijijojojo.cs" />
+    <Compile Include="Migrations\201512010307015_jijijijojojo.Designer.cs">
+      <DependentUpon>201512010307015_jijijijojojo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512010310396_listas.cs" />
+    <Compile Include="Migrations\201512010310396_listas.Designer.cs">
+      <DependentUpon>201512010310396_listas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
@@ -292,6 +304,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511300739468_fechafact.resx">
       <DependentUpon>201511300739468_fechafact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511300931037_ff.resx">
+      <DependentUpon>201511300931037_ff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512010307015_jijijijojojo.resx">
+      <DependentUpon>201512010307015_jijijijojojo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512010310396_listas.resx">
+      <DependentUpon>201512010310396_listas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

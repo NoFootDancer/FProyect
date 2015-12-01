@@ -9,14 +9,21 @@ namespace FProy.BD
 {
    public class Factura
     {
-       [Key]
-       public int idFolio { get; set; }
+       [Key] public int idFolio { get; set; }
        public DateTime Fecha { get; set; }
        public int idStore { get; set; }
        public string datos { get; set; }
 
-       
+       internal void Show()
+       {
+           throw new NotImplementedException();
+       }
 
+       public Factura() {
+
+           this.Juegos = new List<Game>();
+       
+       }
        public virtual ICollection<Game> Juegos { get; set; }
     }
 }

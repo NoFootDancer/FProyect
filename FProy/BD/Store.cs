@@ -12,5 +12,10 @@ namespace FProy.BD
       public int idstore { get; set; }
       public string nameS { get; set; }
 
+      internal void Show()
+      {
+          throw new NotImplementedException();
+      }
+
     }
 }
