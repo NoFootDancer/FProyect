@@ -115,9 +115,7 @@ namespace FProy
 
         private void borrar() {
             Carrito = new List<FProy.BD.Game>();
-            tx1.Text = string.Empty;
-            tx2.Text = string.Empty;
-            tx3.Text = string.Empty;
+      
 
             cb1.SelectedIndex = 0;
             cb2.SelectedIndex = 0;
@@ -147,7 +145,7 @@ namespace FProy
                             FProy.BD.Game gm = new FProy.BD.Game();
                             fact.Fecha = DateTime.Now;
                             fact.idStore = (int)cb2.SelectedValue;
-                            fact.datos = Convert.ToString("Juego: " + cb1.SelectedValue + " Para consola: " + tx1.Text + " Del genero: " + tx2.Text + "Precio: " + tx3.Text);
+                            fact.datos = Convert.ToString("Juego: " + cb1.Text + " Para consola: " + tx1.Text + " Del genero: " + tx2.Text + "Precio: " + tx3.Text);
                            
                             
                             

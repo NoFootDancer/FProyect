@@ -3,6 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="CAPConsola" Height="300" Width="300">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF66FF90" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FFD4D4D4" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Button x:Name="btn" Content="Registrar" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="272" Click="btn_Click"/>
         <Label Content="Codigo&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
         <Label Content="Consola Nombre&#xD;&#xA;" HorizontalAlignment="Left" Margin="167,94,0,0" VerticalAlignment="Top"/>

@@ -98,10 +98,10 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
             int id = (Int32)cb1.SelectedValue;
 
-            if (String.IsNullOrEmpty(t1.Text))
+            if (String.IsNullOrEmpty(t1.Text.Trim()))
             {
 
-                MessageBox.Show("No se puede registrar un juego sin un nombre.");
+                MessageBox.Show("No se puede registrar un juego sin un nombre valido. Intente de nuevo");
             }
             else
             {

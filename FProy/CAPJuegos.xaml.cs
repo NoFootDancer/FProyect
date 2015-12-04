@@ -36,7 +36,7 @@ namespace FProy
                 MessageBox.Show("Introduce una fecha valida"+dp1.SelectedDate.Value);
 
             }
-                if (String.IsNullOrEmpty(tx2.Text))
+                if (String.IsNullOrEmpty(tx2.Text.Trim()))
                 {
 
                     MessageBox.Show("No se puede registrar un juego sin un nombre.");

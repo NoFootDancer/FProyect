@@ -37,7 +37,7 @@ namespace FProy
             else
             {
 
-                if (Regex.IsMatch(tx1.Text, "[a-zA-Z]") && Regex.IsMatch(tx2.Text, "[a-zA-Z0-9]+$"))
+                if (Regex.IsMatch(tx1.Text, @"\s^[a-zA-Z]") && Regex.IsMatch(tx2.Text, "[a-zA-Z0-9]+$"))
                 {
 
                     gen.codgen = tx1.Text;

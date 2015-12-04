@@ -3,6 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="EDIJuegos" Height="300" Width="900.418">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF94806" Offset="0.01"/>
+                <GradientStop Color="White" Offset="0.505"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <DataGrid x:Name="dbg" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Height="150" Width="604" Loaded="dbg_Loaded"/>
         <Button x:Name="Ver" Content="Ver todos&#xD;&#xA;los juegos" HorizontalAlignment="Left" Margin="623,196,0,0" VerticalAlignment="Top" Width="75" Click="Ver_Click"/>
         <Button x:Name="Ver1" Content="Ver juego &#xD;&#xA;seleccionado" HorizontalAlignment="Left" Margin="623,155,0,0" VerticalAlignment="Top" Width="75" Click="Ver1_Click"/>

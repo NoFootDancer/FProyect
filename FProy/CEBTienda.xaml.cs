@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,16 +30,28 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
             FProy.BD.Store st = new FProy.BD.Store();
 
-            st.nameS = tx1.Text;
-            db.Tiendas.Add(st);
-            db.SaveChanges();
+            if (String.IsNullOrEmpty(tx1.Text.Trim()) && Regex.IsMatch(tx1.Text, "[a-zA-Z]"))
+            {
 
-            cb1.ItemsSource = db.Tiendas.ToList();
+                MessageBox.Show("No se puede registrar un juego sin un nombre valido. Use solo letras");
+            }
+            else
+            {
+               
+                    st.nameS = tx1.Text;
+                    db.Tiendas.Add(st);
+                    db.SaveChanges();
 
-            var cons = from s in db.Tiendas
-                       select s;
-            dbg.ItemsSource = cons.ToList();
-            cb1.SelectedIndex = 0;
+                    cb1.ItemsSource = db.Tiendas.ToList();
+
+                    var cons = from s in db.Tiendas
+                               select s;
+                    dbg.ItemsSource = cons.ToList();
+                    cb1.SelectedIndex = 0;
+
+               
+
+            }
 
         }
 
@@ -82,25 +95,35 @@ namespace FProy
 
         private void edit_Click(object sender, RoutedEventArgs e)
         {
-            FProy.BD.MiBd db = new FProy.BD.MiBd();
-            int id = Convert.ToInt32(cb1.SelectedValue);
 
-            var cons = db.Tiendas.SingleOrDefault(s => s.idstore == id);
-            if (cons != null)
+            if (String.IsNullOrEmpty(tx2.Text.Trim()) && Regex.IsMatch(tx2.Text, "[a-zA-Z]"))
             {
-                cons.nameS = Convert.ToString(tx2.Text);
-                db.SaveChanges();
 
-
+                MessageBox.Show("No se puede registrar una tienda sin un nombre valido. No use números");
             }
+            else
+            { 
 
-            var cons1 = from s in db.Tiendas
-                        select s;
 
-            dbg.ItemsSource = cons1.ToList();
-            cb1.ItemsSource = db.Tiendas.ToList();
-            cb1.SelectedIndex = 0;
-            
+                FProy.BD.MiBd db = new FProy.BD.MiBd();
+                int id = Convert.ToInt32(cb1.SelectedValue);
+
+                var cons = db.Tiendas.SingleOrDefault(s => s.idstore == id);
+                if (cons != null)
+                {
+                    cons.nameS = Convert.ToString(tx2.Text);
+                    db.SaveChanges();
+
+
+                }
+
+                var cons1 = from s in db.Tiendas
+                            select s;
+
+                dbg.ItemsSource = cons1.ToList();
+                cb1.ItemsSource = db.Tiendas.ToList();
+                cb1.SelectedIndex = 0;
+            }
         }
     }
 }

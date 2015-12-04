@@ -48,12 +48,25 @@ namespace FProy
             FProy.BD.MiBd db = new FProy.BD.MiBd();
             String id = (String)cb1.SelectedValue;
 
-           var cons = db.Companias.SingleOrDefault(s => s.codcomp == id);
-           
-            if (cons != null) {
-                db.Companias.Remove(cons);
-                db.SaveChanges();
-            } 
+           var cons = db.Juegos.FirstOrDefault(s => s.codcomp == id);
+
+           if (cons != null)
+           {
+               MessageBox.Show("No se puede borrar un dato que ya esta siendo usado en los registros.");
+           }
+           else {
+
+
+               var con = db.Companias.FirstOrDefault(s => s.codcomp == id);
+               db.Companias.Remove(con);
+               db.SaveChanges();
+
+               var cons1 = from s in db.Companias
+                           select s;
+               dbg.ItemsSource = cons1.ToList();
+               cb1.ItemsSource = db.Companias.ToList();
+               cb1.SelectedIndex = 0;
+           } 
             
         }
     }

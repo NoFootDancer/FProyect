@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -56,17 +57,25 @@ namespace FProy
             FProy.BD.MiBd db =new FProy.BD.MiBd();
             String id = (String)cb1.SelectedValue;
 
-            var cons = db.Companias.SingleOrDefault(s => s.codcomp == id);
-            
 
-            if (cons != null)
+            if (String.IsNullOrEmpty(txt1.Text.Trim()) && Regex.IsMatch(txt1.Text, "[a-zA-Z]"))
             {
-                cons.namec = Convert.ToString(txt1.Text);
-                db.SaveChanges();
+
+                MessageBox.Show("No se puede registrar una tienda sin un nombre valido. No use números");
             }
-            
+            else
+            { //}
+                var cons = db.Companias.SingleOrDefault(s => s.codcomp == id);
 
 
+                if (cons != null)
+                {
+                    cons.namec = Convert.ToString(txt1.Text);
+                    db.SaveChanges();
+                }
+
+
+            }
         }
     }
 }
