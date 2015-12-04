@@ -66,6 +66,13 @@ namespace FProy
                     db.SaveChanges();
                 }
             }
+            var cons1 = from s in db.Consolas
+                        select s;
+
+            dbg.ItemsSource = cons1.ToList();
+            cb1.ItemsSource = db.Consolas.ToList();
+            cb1.SelectedIndex = 0;
         }
+
     }
 }

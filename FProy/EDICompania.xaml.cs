@@ -76,6 +76,12 @@ namespace FProy
 
 
             }
+            var cons1 = from s in db.Companias
+                        select s;
+
+            dbg.ItemsSource = cons1.ToList();
+            cb1.ItemsSource = db.Companias.ToList();
+            cb1.SelectedIndex = 0;
         }
     }
 }

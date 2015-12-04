@@ -68,6 +68,12 @@ namespace FProy
                     db.SaveChanges();
                 }
             }
+            var cons1 = from s in db.Generos
+                        select s;
+
+            dbg1.ItemsSource = cons1.ToList();
+            cb1.ItemsSource = db.Generos.ToList();
+            cb1.SelectedIndex = 0;
         }
 
     }
